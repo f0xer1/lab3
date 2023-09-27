@@ -264,6 +264,26 @@ border:  none;
     color: white;
 
 }
+/*users*/
+.user-block{
+    display: grid;
+    grid-template-columns: 1fr 2fr ;
+    grid-template-rows: 100px 100px ;
+    background-color: #b4b4b4;
+    padding: 20px;
+    margin-top: 5px;
+}
+.user-img{
+    width: 200px;
+    border-radius: 50%;
+}
+.user-name{
+
+}
+.user-response{
+    color: #f0a433;
+
+}
 /*footer*/
 footer p {
     color: black;
