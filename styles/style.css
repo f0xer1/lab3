@@ -1,15 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@500;600&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+/* Reset some default styles */
 html, body {
     height: 100%;
-}
-body {
-    display: flex;
-    flex-direction: column;
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
+/* Global styles */
+body {
+    font-family: "Ubuntu", sans-serif;
+    display: flex;
+    flex-direction: column;
+}
 
+/* Header styles */
 .header {
     background-color: #f4f4f4;
     padding: 5px 0;
@@ -24,14 +29,15 @@ body {
 .header-title {
     font-size: 14px;
     color: #333;
-    margin: 0;
-    margin-right: 40px;
+    margin: 0 40px 0 0;
+
     text-transform: uppercase;
 }
 
 .header-nav {
     display: flex;
     align-items: center;
+
 }
 
 .dropdown {
@@ -44,14 +50,17 @@ body {
     border-top: 1px solid #e9ecef;
 }
 
+.dropdown a,
 .dropbtn {
     background-color: transparent;
     border: none;
-    color: #777;
+    color: rgba(0, 0, 0, .3);
     cursor: pointer;
     font-size: 14px;
     text-transform: uppercase;
     margin-right: 20px;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
 .dropbtn:hover {
@@ -63,19 +72,21 @@ body {
     position: absolute;
     background-color: #fff;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 10px;
+
 }
 
 .dropdown-content a {
+
     color: #333;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     white-space: nowrap;
     font-size: 12px;
-        text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 .dropdown-content a:hover {
@@ -86,101 +97,93 @@ body {
     display: block;
 }
 
-.header-container {
-    max-width: 1200px;
-    margin: 0;
-    padding: 20px;
-}
-
+.header-container,
 .container {
     max-width: 1200px;
-    margin: 0 auto;
     padding: 20px;
 }
 
-
-
-/*main */
+/* Main styles */
 main {
     margin: 20px 10px;
     flex: 1 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 2fr;
 }
-/*slider*/
+
+/* Slider styles */
 .slider {
-   width:85%;
-   height: auto;
-   overflow: hidden;
+    width: 85%;
+    height: auto;
+    overflow: hidden;
 }
 
 .middle {
-   position: relative;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .navigation {
-   position: absolute;
-   top: 16px;
-   left: 50%;
-   transform: translateX(-50%);
-   display: flex;
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
 }
 
 .bar {
-   width: 30px;
-   height: 8px;
-   margin: 6px;
-   cursor: pointer;
-   background-color: #000;
-   opacity: .5;
-   border-radius: 10px;
-   transition: all 0.4s ease;
+    width: 30px;
+    height: 8px;
+    margin: 6px;
+    cursor: pointer;
+    background-color: #000;
+    opacity: .5;
+    border-radius: 10px;
+    transition: all 0.4s ease;
 }
 
 .bar:hover {
-   opacity: 1;
-   transform:scale(1.1);
+    opacity: 1;
+    transform: scale(1.1);
 }
-
 input[name="r"] {
-   position: absolute;
-   visibility: hidden;
+    position: absolute;
+    visibility: hidden;
 }
 
 .slides {
-   width: 400%;
-   height: 100%;
-   display: flex;
+    width: 400%;
+    height: 100%;
+    display: flex;
 }
 
 .slide {
-   width: 25%;
-   transition: all 0.6s ease;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   position: relative;
+    width: 25%;
+    transition: all 0.6s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 
 .img-container {
-   position: relative;
-   text-align: center;
+    position: relative;
+    text-align: center;
 }
 
 .img {
-   width: 99%;
-   height: auto;
-   border: 2px solid #000;
+    width: 99%;
+    height: auto;
+    border: 2px solid #000;
 }
 
 .slide-text {
-   color: black;
-   text-align: left;
-   margin-top: 5px;
-   display: block;
+    color: black;
+    text-align: left;
+    margin-top: 5px;
+    display: block;
 }
 
 .blue {
@@ -189,25 +192,27 @@ input[name="r"] {
 }
 
 #r1:checked ~ .s1 {
-   margin-left: 0;
+    margin-left: 0;
 }
 
 #r2:checked ~ .s1 {
-   margin-left: -25%;
+    margin-left: -25%;
 }
 
 #r3:checked ~ .s1 {
-   margin-left: -50%;
+    margin-left: -50%;
 }
 
 #r4:checked ~ .s1 {
-   margin-left: -75%;
+    margin-left: -75%;
 }
 
 .no-border {
     border: none ;
 }
+/* ... (slider styles continued) */
 
+/* Block styles */
 .left-block {
     grid-column: 3 span;
     justify-self: center;
@@ -227,96 +232,107 @@ input[name="r"] {
     border: 1px solid #ccc;
 }
 
-/*news */
-.news-block{
-border:  none;
+/* News styles */
+.news-block {
+    border: none;
     padding-top: 0;
     margin-top: 0;
 }
-.news-card{
+
+.news-card {
     margin-top: 10px;
     border: 1px solid #ccc;
     padding: 20px;
 }
-.card-title{
+
+.card-title {
     font-size: 20px;
     color: #208843;
     margin-bottom: 20px;
     font-weight: lighter;
     margin-top: 0;
 }
-.card-subtitle{
+
+.card-subtitle {
     color: #6c757d;
     font-size: 12px;
     margin-bottom: 0;
 }
-.card-text{
+
+.card-text {
     color: #111;
     font-size: 14px;
 }
-.btn-card{
+
+.btn-card {
     cursor: pointer;
     background-color: #f0a433;
     border: 1px solid #f08833;
-
     transition: all .3s ease;
     padding: 10px 20px;
     font-size: 16px;
     color: white;
-
 }
-/*users*/
-.user-block{
+
+/* Users styles */
+.user-block {
     display: flex;
     gap: 20px;
     background-color: #f4f4f4;
-
     padding: 20px;
     border-radius: 2%;
     margin-top: 20px;
 }
-.user-img{
 
+.user-img {
     width: 20%;
-height:20% ;
+    height: 20%;
     border-radius: 50%;
 }
-.user-name{
+
+.user-name {
     font-size: 18px;
 }
-.user-response{
-    color: #f0a433;
 
+.user-response {
+    color: #f0a433;
 }
-.user-work{
+
+.user-work {
     display: flex;
     flex-wrap: wrap;
 }
-.user-work p{
+
+.user-work p {
     color: white;
     padding: 2px 6px;
     border-radius: 6px;
     font-size: 14px;
     margin-right: 5px;
 }
-.lecture{
+
+.lecture {
     background-color: rgb(78, 103, 186);
 }
-.practitioner{
+
+.practitioner {
     background-color: rgb(218, 95, 53);
 }
-.laboratory{
+
+.laboratory {
     background-color: rgb(52, 112, 102);
 }
-/*footer*/
+
+/* Footer styles */
 footer p {
     color: black;
 }
 
-footer a{
-    text-decoration:  none;
+footer a {
+    text-decoration: none;
     color: #208944;
 }
+
 footer {
     flex-shrink: 0;
     border-top: 2px solid #208944;
@@ -335,20 +351,23 @@ footer {
     margin-left: 5%;
     align-items: center;
 }
-.footer-social{
+
+.footer-social {
     display: flex;
     gap: 5%;
     white-space: nowrap;
 }
-.footer-social i{
+
+.footer-social i {
     margin-right: 10px;
 }
+
 @media screen and (max-width: 1380px) {
     .footer-social {
-       flex-direction: column;
+        flex-direction: column;
     }
-
 }
+
 @media screen and (max-width: 768px) {
     .footer_content {
         flex-direction: column;
@@ -363,5 +382,26 @@ footer {
 
     .footer-social a {
         display: block;
+    }
+    .header-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+
+    }
+    .header-container{
+        display: flex;
+        justify-content: end;
+    }
+    main{
+        margin: 20px 5px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dropdown-content a {
+        white-space: normal;
     }
 }
