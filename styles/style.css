@@ -205,11 +205,12 @@ input[name="r"] {
 }
 
 .no-border {
-    border: none !important;
+    border: none ;
 }
 
 .left-block {
     grid-column: 3 span;
+    justify-self: center;
 }
 
 .right-block {
@@ -266,23 +267,46 @@ border:  none;
 }
 /*users*/
 .user-block{
-    display: grid;
-    grid-template-columns: 1fr 2fr ;
-    grid-template-rows: 100px 100px ;
-    background-color: #b4b4b4;
+    display: flex;
+    gap: 20px;
+    background-color: #f4f4f4;
+
     padding: 20px;
-    margin-top: 5px;
+    border-radius: 2%;
+    margin-top: 20px;
 }
 .user-img{
-    width: 200px;
+
+    width: 20%;
+height:20% ;
     border-radius: 50%;
 }
 .user-name{
-
+    font-size: 18px;
 }
 .user-response{
     color: #f0a433;
 
+}
+.user-work{
+    display: flex;
+    flex-wrap: wrap;
+}
+.user-work p{
+    color: white;
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-right: 5px;
+}
+.lecture{
+    background-color: rgb(78, 103, 186);
+}
+.practitioner{
+    background-color: rgb(218, 95, 53);
+}
+.laboratory{
+    background-color: rgb(52, 112, 102);
 }
 /*footer*/
 footer p {
