@@ -107,9 +107,9 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 2fr;
 }
-
+/*slider*/
 .slider {
-   width: 800px;
+   width:85%;
    height: auto;
    overflow: hidden;
 }
