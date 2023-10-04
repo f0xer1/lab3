@@ -2,54 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
     <link rel="stylesheet" href="../styles/registration.css">
     <link rel="icon" href="../img/logo.png" type="image/x-icon">
-  </head>
+</head>
 <body>
-<div class="background-container">
-    <img src="/img/kpi_bg.jpg" alt="bg_kpi" class="blurred-background">
-</div>
+
 <div class="container">
-    <h2 class="text-center">Реєстрація</h2>
     <form>
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" placeholder="Введіть ваш email" required>
+        <div class="form_box">
+            <h2 class="text-center">Створи акаунт</h2>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Введіть ваш email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" placeholder="Введіть пароль" required>
+            </div>
+            <div class="form-group">
+                <label for="last_name">Прізвище:</label>
+                <input type="text" id="last_name" placeholder="Введіть ваше прізвище" required>
+            </div>
+            <div class="form-group">
+                <label for="first_name">Ім'я:</label>
+                <input type="text" id="first_name" placeholder="Введіть ваше ім'я" required>
+            </div>
+            <div class="form-group">
+                <label for="middle_name">По батькові:</label>
+                <input type="text" id="middle_name" placeholder="Введіть ваше по батькові" required>
+            </div>
+            <div class="form-group">
+                <label for="birthdate">Дата народження:</label>
+                <input type="date" id="birthdate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="group">Група:</label>
+                <select id="group">
+                    <option value="група 1">Група ІА-21</option>
+                    <option value="група 2">Група ІА-22</option>
+                    <option value="група 3">Група ІА-23</option>
+                </select>
+
+                <div class="form-group">
+                    <label for="file">Завантажити файл:</label>
+                    <label class="custom-file-upload">
+                        <span>Вибрати файл</span>
+                        <input type="file" id="file" accept=".png" required>
+                    </label>
+                </div>
+            </div>
+            <button type="submit">Зареєструватися</button>
+            <div class="authorization_box mobile">
+                <img src="/img/registr-image.jpg" alt="">
+                <p>Вже є акаунт? <a href="/html/authorization.html">Увійти.</a></p>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="password">Пароль:</label>
-            <input type="password" id="password" placeholder="Введіть пароль" required>
+
+        <div class="authorization_box">
+            <img src="/img/registr-image.jpg" alt="">
+            <p>Вже є акаунт? <a href="/html/authorization.html">Увійти.</a></p>
         </div>
-        <div class="form-group">
-            <label for="last_name">Прізвище:</label>
-            <input type="text" id="last_name" placeholder="Введіть ваше прізвище" required>
-        </div>
-        <div class="form-group">
-            <label for="first_name">Ім'я:</label>
-            <input type="text" id="first_name" placeholder="Введіть ваше ім'я" required>
-        </div>
-        <div class="form-group">
-            <label for="middle_name">По батькові:</label>
-            <input type="text" id="middle_name" placeholder="Введіть ваше по батькові" required>
-        </div>
-        <div class="form-group">
-            <label for="birthdate">Дата народження:</label>
-            <input type="date" id="birthdate" required>
-        </div>
-        <div class="form-group">
-            <label for="group">Група:</label>
-            <select id="group">
-                <option value="група 1">Група ІА-21</option>
-                <option value="група 2">Група ІА-22</option>
-                <option value="група 3">Група ІА-23</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="file">Завантажити файл:</label>
-            <input type="file" id="file" accept=".png" required>
-        </div>
-        <button type="submit">Зареєструватися</button>
     </form>
 </div>
 

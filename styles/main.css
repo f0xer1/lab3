@@ -378,6 +378,7 @@ footer {
 }
 
 @media screen and (max-width: 1380px) {
+
     .footer-social {
         flex-direction: column;
     }
