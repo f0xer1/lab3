@@ -49,6 +49,7 @@
 }
 #sidebar{
     position: fixed;
+    z-index: 998;
     background: #404040;
     height: 100%;
     width: 270px;
