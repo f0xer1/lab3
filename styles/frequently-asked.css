@@ -6,9 +6,10 @@
 }
 body{
     font-family: "Ubuntu", sans-serif;
-    background:#FBF5F2 ;
-    color: #505050;
+    background: #ceffce;
+    color: #12192c;
 }
+
 section{
     min-height: 100vh;
     width: 80%;

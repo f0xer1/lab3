@@ -1,87 +1,10 @@
-html,
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@500;600&family=Ubuntu:wght@300;400;500;700&display=swap');
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  display: flex;
-}
+    background: #ceffce;
+    font-family: "Ubuntu", sans-serif;
+    color: white;
 
-content {
-  margin-left: 250px;
-  width: calc(100vw - 250px);
-  transition: 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-aside {
-  width: 250px;
-  height: 100vh;
-  background: #208944;
-  position: fixed;
-
-  color: #fff;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-
-  left: 0;
-
-  transition: left 0.3s ease;
-
-  box-shadow: 3px 1px 5px 0px rgba(0, 0, 0, 0.75)
-}
-
-aside ul {
-  padding-inline-start: 0;
-}
-
-aside ul li {
-  list-style: none;
-  font-size: 18px;
-  padding: 20px 0;
-  cursor: pointer;
-}
-
-aside ul li .fas {
-  width: 50px;
-}
-
-.aside-wrapper {
-  padding: 0 40px;
-  box-sizing: border-box;
-}
-
-.logo-text {
-  font-size: 32px;
-  position: relative;
-}
-
-.sidebar-toggle {
-  position: absolute;
-  top: 5px;
-  left: 205px;
-  background: #208944;
-  padding: 4px 11px;
-  text-align: center;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-input {
-  display: none;
-}
-
-input:checked ~ aside {
-  left: -250px;
-}
-
-input:checked ~ content {
-    margin-left: 0;
-    width: 100vw;
 }
 
 table {
@@ -92,16 +15,69 @@ table {
 }
 
 th, td {
-    border: 1px solid #ccc;
-    padding: 10px;
+
+    padding: 30px;
     text-align: left;
 }
 
+/* #7f886a #f3ecdb*/
 th {
-    background-color: #f2f2f2;
+    background-color: #71695e;
+}
+
+tr {
+    background-color: #bdbdbd;
+
+}
+
+td {
+    color: black;
 }
 
 .action-buttons {
     display: flex;
     justify-content: space-around;
+}
+
+h1 {
+    color: #33302e;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+td i {
+    margin: 0 5px;
+    color: #44413a;
+}
+
+.head_box {
+    display: flex;
+    align-items: center;
+}
+
+.girl_img {
+    position: absolute;
+    max-width: 200px;
+    top: 20%;
+    right: 27%;
+}
+
+@media screen and (max-width: 1240px) {
+    .girl_img {
+
+        right: 10%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .girl_img {
+        display: none;
+    }
 }

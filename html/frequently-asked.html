@@ -4,18 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ</title>
+    <link rel="stylesheet" href="../styles/sidebar.css">
     <link rel="stylesheet" href="../styles/frequently-asked.css">
     <link rel="icon" href="../img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-<section>
-    <h2 class="title">FAQs</h2>
 
+<div class="wrapper">
+    <input type="checkbox" id="btn" hidden>
+    <label for="btn" class="menu-btn">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times"></i>
+    </label>
+    <nav id="sidebar">
+        <div class="title_sidebar">
+            Меню
+        </div>
+        <ul class="list-items">
+            <li><a href="#"><i class="fas fa-home"></i>На головну</a></li>
+            <li><a href="#"><i class="fas fa-sliders-h"></i>Таблиця завдань</a></li>
+            <li><a href="#"><i class="fas fa-cog"></i>Налаштування</a></li>
+
+            <li><a href="#"><i class="fas fa-user"></i>Питання та відповіді</a></li>
+            <li><a href="#"><i class="fas fa-envelope"></i>Напиши нам</a></li>
+            <div class="icons">
+                <a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+            </div>
+        </ul>
+    </nav>
+</div>
+<section>
+
+
+    <h2 class="title">FAQs</h2>
     <div class="faq">
         <div class="question">
             <h3>Що таке кампус?</h3>
             <svg width="15" height="10" viewBox="0 0 42 25">
-                <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                <path d="M3 3L21 21L39 3"  stroke-width="7" stroke-linecap="round"/>
             </svg>
         </div>
         <div class="answer">
@@ -31,7 +58,7 @@
         <div class="question">
             <h3>Як користуватись кампусом?</h3>
             <svg width="15" height="10" viewBox="0 0 42 25">
-                <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                <path d="M3 3L21 21L39 3"  stroke-width="7" stroke-linecap="round"/>
             </svg>
         </div>
         <div class="answer">
@@ -47,7 +74,7 @@
         <div class="question">
             <h3>Питання номер 3)</h3>
             <svg width="15" height="10" viewBox="0 0 42 25">
-                <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                <path d="M3 3L21 21L39 3"  stroke-width="7" stroke-linecap="round"/>
             </svg>
         </div>
         <div class="answer">
@@ -59,6 +86,8 @@
             </p>
         </div>
     </div>
+
+
 </section>
 </body>
 <script src="/app.js"></script>
