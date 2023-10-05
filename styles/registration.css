@@ -20,6 +20,7 @@ i{
     left: 5px;
 }
 h2{
+    color: #ff9558;
     margin: 10px 0 ;
 }
 .container {
@@ -45,9 +46,7 @@ h2{
     text-align: center;
     justify-self: end;
     width: 50%;
-    border: 1px solid #ccc; /* Додайте легке обведення */
-    border-radius: 10px; /* Закруглені кути */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Тінь */
+
 }
 
 .authorization_box {
