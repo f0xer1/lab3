@@ -7,7 +7,6 @@ body {
 }
 
 content {
-  padding: 20px;
   margin-left: 250px;
   width: calc(100vw - 250px);
   transition: 0.3s ease;
