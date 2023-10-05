@@ -109,7 +109,27 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 2fr;
 }
+/*Current btn*/
+.current_version_box{
+    grid-column:3 span;
+    width: 80%;
+    justify-self: center;
+    background-color: #e9ecef;
+    margin: 2rem 0;
+    border: 1px solid #ccc;
+    padding: 20px;
 
+}
+.cv_text{
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+.line_cv{
+    margin: 1.5rem 0;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
 /* Slider styles */
 .slider {
     width: 85%;
@@ -264,6 +284,7 @@ input[name="r"] {
 }
 
 .btn-card {
+    text-decoration: none;
     cursor: pointer;
     background-color: #f0a433;
     border: 1px solid #f08833;
