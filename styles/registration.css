@@ -11,7 +11,7 @@ body {
 
     font-family: "Ubuntu", sans-serif;
     background: #FBF5F2;
-
+    height: 100vh;
 }
 i{
     color:#718a66 ;
@@ -24,7 +24,7 @@ h2{
     margin: 10px 0 ;
 }
 .container {
-    margin-top: 5%;
+
 }
 
 .mobile {
@@ -32,9 +32,12 @@ h2{
 }
 
 .container form {
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 100px;
+    place-items: center;
+    height: 100vh;
 
 }
 
@@ -160,7 +163,17 @@ button:hover {
 }
 
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1220px) {
+    .container form {
+
+        display: grid;
+        grid-template-columns: 60% 30%;
+        gap: 10px;
+
+    }
+
+}
+@media screen and (max-width: 768px) {
     body{
 
     }
@@ -189,11 +202,8 @@ button:hover {
     p {
         margin: 10px 0;
     }
-
-}
-@media screen and (max-width: 768px) {
     .form_box{
         width: 95%;
     }
-}
 
+}

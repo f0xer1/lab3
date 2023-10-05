@@ -1,0 +1,34 @@
+.form_box {
+
+    justify-self: start;
+
+
+}
+.container form {
+
+    display: grid;
+    grid-template-columns: 40% 60%;
+
+
+}
+.authorization_box {
+    margin:  auto 0;
+    justify-self: end;
+
+}
+.authorization_box, p {
+    margin-left: 0;
+}
+
+@media screen and (max-width: 768px) {
+
+    .container form {
+
+        display: flex;
+        justify-content: center;
+
+
+    }
+
+
+}
