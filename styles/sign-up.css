@@ -115,6 +115,41 @@ select {
     outline: none;
 }
 
+
+
+
+/* Стилізація для поля вибору статі */
+.form-group label {
+    display: block;
+
+}
+.sex div{
+    display: flex;
+    flex-direction: row;
+
+}
+.sex div div{
+display: flex;
+    flex-direction: column;
+    margin: 10px;
+
+}
+
+.form-group input[type="radio"] {
+    display: inline-block;
+    width: 20px; /
+    height: 20px;
+    margin-right: 5px;
+    cursor: pointer;
+
+}
+
+
+
+
+
+
+
 /* Стилізація інпуту з файлами */
 input[type="file"] {
     opacity: 0;

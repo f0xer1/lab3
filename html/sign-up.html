@@ -23,6 +23,7 @@
                         <th>Прізвище</th>
                         <th>Ім'я</th>
                         <th>Номер телефону</th>
+                        <th>Стать</th>
                         <th>Група</th>
                     </tr>
                     </thead>
@@ -63,6 +64,26 @@
                 <label for="telephone">Номер телефону</label>
                 <input type="tel" id="telephone" placeholder="Введіть номер телефону" required>
             </div>
+            <div class="form-group sex">
+                <label>Стать:</label>
+                <div>
+                    <div class="sex_box">
+                        <label for="male">Чоловік</label>
+                        <input type="radio" name="gender" value="Чоловік" id="male" required>
+
+                    </div>
+                    <div class="sex_box"><label for="female">Жінка</label>
+                        <input type="radio" name="gender" value="Жінка" id="female">
+
+                    </div>
+                    <div class="sex_box">
+                        <label for="beaver">Бобер</label>
+                        <input type="radio" name="gender" value="Бобер" id="beaver">
+
+                    </div>
+                </div>
+            </div>
+
             <div class="form-group">
                 <label for="group">Група:</label>
                 <select id="group">
