@@ -10,6 +10,31 @@
 <body>
 
 <div class="container">
+    <div class="container">
+        <button id="openModalButton">Відкрити таблицю</button>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <button id="closeModalButton">Закрити</button>
+                <table id="data-table">
+                    <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>Прізвище</th>
+                        <th>Ім'я</th>
+                        <th>Номер телефону</th>
+                        <th>Група</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- Тут будуть відображатися дані з форми -->
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
     <form>
         <div class="form_box">
             <h2 class="text-center">Створи акаунт</h2>
@@ -17,10 +42,7 @@
                 <label for="email">Email:</label>
                 <input type="email" id="email" placeholder="Введіть ваш email" required>
             </div>
-            <div class="form-group">
-                <label for="password">Пароль:</label>
-                <input type="password" id="password" placeholder="Введіть пароль" required>
-            </div>
+
             <div class="form-group">
                 <label for="last_name">Прізвище:</label>
                 <input type="text" id="last_name" placeholder="Введіть ваше прізвище" required>
@@ -30,14 +52,17 @@
                 <input type="text" id="first_name" placeholder="Введіть ваше ім'я" required>
             </div>
             <div class="form-group">
-                <label for="middle_name">По батькові:</label>
-                <input type="text" id="middle_name" placeholder="Введіть ваше по батькові" required>
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" placeholder="Введіть пароль" required>
             </div>
             <div class="form-group">
-                <label for="birthdate">Дата народження:</label>
-                <input type="date" id="birthdate" required>
+                <label for="password_repeat">Повторіть пароль:</label>
+                <input type="password" id="password_repeat" placeholder="Повторіть пароль" required>
             </div>
-
+            <div class="form-group">
+                <label for="telephone">Номер телефону</label>
+                <input type="tel" id="telephone" placeholder="Введіть номер телефону" required>
+            </div>
             <div class="form-group">
                 <label for="group">Група:</label>
                 <select id="group">
@@ -46,13 +71,6 @@
                     <option value="група 3">Група ІА-23</option>
                 </select>
 
-                <div class="form-group">
-                    <label for="file">Завантажити файл:</label>
-                    <label class="custom-file-upload">
-                        <span>Вибрати файл</span>
-                        <input type="file" id="file" accept=".png" required>
-                    </label>
-                </div>
             </div>
             <button type="submit">Зареєструватися</button>
             <div class="authorization_box mobile">
@@ -69,4 +87,5 @@
 </div>
 
 </body>
+<script src="/js/sign-up.js"></script>
 </html>
