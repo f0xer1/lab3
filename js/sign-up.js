@@ -50,5 +50,47 @@ form.addEventListener("submit", function (event) {
     form.reset();
 });
 
+let rows = [];
+$('.table').on('clicked.rs.row', function (evt){
+    rows = $(this).selectedrows();
+    updateButtonsState();
+});
+const deleteButton = document.getElementById('deleteButton');
+const duplicateButton = document.getElementById('duplicateButton');
 
+function updateButtonsState() {
+    if (rows.length === 0) {
+        deleteButton.disabled = true;
+        duplicateButton.disabled = true;
+        deleteButton.style.backgroundColor = 'gray';
+        duplicateButton.style.backgroundColor = 'gray';
+        deleteButton.style.cursor = 'default';
+        duplicateButton.style.cursor = 'default';
+    } else {
+        deleteButton.disabled = false;
+        duplicateButton.disabled = false;
+        deleteButton.style.backgroundColor = '#ff9558';
+        duplicateButton.style.backgroundColor = '#ff9558';
+        deleteButton.style.cursor = 'pointer';
+        duplicateButton.style.cursor = 'pointer';
+    }
+}
+
+deleteButton.addEventListener('click', () => {
+    $(rows).each(function() {
+        $(this).remove();
+    });
+    rows = [];
+    updateButtonsState();
+});
+
+duplicateButton.addEventListener('click', () => {
+    $(rows).each(function() {
+        const duplicateRow = $(this).clone();
+        duplicateRow.removeClass('selected');
+        duplicateRow.insertAfter($(this));
+    });
+});
+
+updateButtonsState();
 

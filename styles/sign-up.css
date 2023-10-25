@@ -228,9 +228,13 @@ button:hover {
     text-align: center;
 }
 
-/* Стилі для кнопки закриття */
-#closeModalButton {
-margin-left: 90%;
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table-button {
     margin-bottom: 10px;
     width: 10%;
     font-size: 12px;
@@ -238,8 +242,15 @@ margin-left: 90%;
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
     cursor: pointer;
+}
+
+.button-right {
+    margin-left: auto;
+}
+
+.button-left {
+    margin-right: 10px;
 }
 
 /* Стилі для кнопки відкриття */
@@ -301,12 +312,6 @@ margin-left: 90%;
 #data-table tbody tr:nth-child(odd) {
     background-color: #f7f7f7;
 }
-
-/* Змініть стилі для виділеного рядка */
-#data-table tbody tr:hover {
-    background-color: #e0e0e0;
-}
-
 
 
 @media screen and (max-width: 1220px) {

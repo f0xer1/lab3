@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Реєстрація</title>
     <link rel="stylesheet" href="../styles/sign-up.css">
+    <link rel="stylesheet" href="../styles/jquery-table.css">
     <link rel="icon" href="../img/logo.png" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="/js/jquery.rowselector.min.js"></script>
 </head>
 <body>
 
@@ -15,8 +18,12 @@
 
         <div id="modal" class="modal">
             <div class="modal-content">
-                <button id="closeModalButton">Закрити</button>
-                <table id="data-table">
+                <div class="button-container">
+                    <button id="deleteButton" class="table-button button-left">Видалити</button>
+                    <button id="duplicateButton" class="table-button button-left">Дублювати</button>
+                    <button id="closeModalButton" class="table-button button-right">Закрити</button>
+                </div>
+                <table id="data-table" data-rs-selectable class="table table-striped">
                     <thead>
                     <tr>
                         <th>Email</th>
@@ -106,7 +113,6 @@
         </div>
     </form>
 </div>
-
 </body>
 <script src="/js/sign-up.js"></script>
 </html>
