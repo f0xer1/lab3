@@ -14,13 +14,6 @@ body {
     height: 100vh;
 }
 
-i {
-    color: #718a66;
-    position: relative;
-    bottom: -30px;
-    left: 5px;
-}
-
 h2 {
     color: #ff9558;
     margin: 10px 0;
@@ -115,6 +108,11 @@ select {
     outline: none;
 }
 
+.error-message {
+    color: red;
+    margin-bottom: 10px;
+    display: none;
+}
 
 
 
@@ -226,6 +224,7 @@ button:hover {
     border-radius: 10px;
     padding: 20px;
     text-align: center;
+    overflow-y: auto;
 }
 
 .button-container {
@@ -243,6 +242,17 @@ button:hover {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+i {
+    bottom: 5px;
+    display: block;
+    font-weight: 900;
+    font-family: "Font Awesome 6 Free";
+    font-style: normal;
+    position: relative;
+    margin: 10px;
+    display: none;
+    color: 'black';
 }
 
 .button-right {
@@ -266,7 +276,13 @@ button:hover {
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
+    display: block;
+}
 
+#iconOpen {
+    position: absolute;
+    right: 8px;
+    top: 5px;
 }
 
 #modalToggle{
@@ -359,4 +375,70 @@ button:hover {
         width: 95%;
     }
 
+    table {
+        border: 0;
+    }
+
+    table thead {
+        display: none;
+    }
+
+    table tr {
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    table td {
+        display: block;
+        font-size: 13px;
+    }
+
+    #data-table td {
+        text-align: right;
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+    }
+
+    table td:before {
+        content: attr(data-label);
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    i {
+        display: block;
+    }
+
+    .table-button {
+        display: none;
+    }
+
+    #openModalButton {
+        display: none;
+    }
+}
+
+.table-striped > tbody > tr:nth-child(odd).selected > td
+{
+    background-color: #9FAFD1;
+}
+
+.table-striped > tbody > tr:nth-child(even).selected > td
+{
+    background-color: #B0BED9;
+}
+
+.table-striped > tbody > tr:nth-child(odd) > td
+{
+    background-color: #dedede;
+    color: #2b2b2b;
+}
+
+.table-striped > tbody > tr:nth-child(even) > td
+{
+    background-color: #f2f2f2;
+    color: #2b2b2b;
 }

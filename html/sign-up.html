@@ -5,23 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Реєстрація</title>
     <link rel="stylesheet" href="../styles/sign-up.css">
-    <link rel="stylesheet" href="../styles/jquery-table.css">
     <link rel="icon" href="../img/logo.png" type="image/x-icon">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="/js/jquery.rowselector.min.js"></script>
+    <script src="/js/jquery.mask.min.js"></script>
 </head>
 <body>
 
 <div class="container">
     <div class="container">
         <button id="openModalButton">Відкрити таблицю</button>
+        <i id="iconOpen" class="icon-right-top fa-table"></i>
 
         <div id="modal" class="modal">
             <div class="modal-content">
                 <div class="button-container">
                     <button id="deleteButton" class="table-button button-left">Видалити</button>
+                    <i id="iconDelete" class="button-left fa-trash"></i>
                     <button id="duplicateButton" class="table-button button-left">Дублювати</button>
+                    <i id="iconDuplicate" class="button-left fa-copy"></i>
                     <button id="closeModalButton" class="table-button button-right">Закрити</button>
+                    <i id="iconClose" class="button-right fa-arrow-right-from-bracket"></i>
                 </div>
                 <table id="data-table" data-rs-selectable class="table table-striped">
                     <thead>
@@ -66,10 +71,12 @@
             <div class="form-group">
                 <label for="password_repeat">Повторіть пароль:</label>
                 <input type="password" id="password_repeat" placeholder="Повторіть пароль" required>
+                <div class="error-message" id="errorMessagePassword">Пароль не співпадає!!!</div>
             </div>
             <div class="form-group">
                 <label for="telephone">Номер телефону</label>
-                <input type="tel" id="telephone" placeholder="Введіть номер телефону" required>
+                <input type="tel" id="telephone" placeholder="+38(___)-___-__-__" required>
+                <div class="error-message" id="errorMessagePhoneNumber">Введіть номер телефону повністю!!!</div>
             </div>
             <div class="form-group sex">
                 <label>Стать:</label>
@@ -94,9 +101,9 @@
             <div class="form-group">
                 <label for="group">Група:</label>
                 <select id="group">
-                    <option value="група 1">Група ІА-21</option>
-                    <option value="група 2">Група ІА-22</option>
-                    <option value="група 3">Група ІА-23</option>
+                    <option value="ІА-21">Група ІА-21</option>
+                    <option value="ІА-22">Група ІА-22</option>
+                    <option value="ІА-23">Група ІА-23</option>
                 </select>
 
             </div>
